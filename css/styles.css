@@ -13,7 +13,6 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 30px;
 }
 
 /********************* VARIABLES *********************/
@@ -22,6 +21,21 @@ body {
   --bleuclair: #deebff;
   --grisclair: #f2f2f2;
   --grisfonce: #d9d9d9;
+}
+
+/********************* GENERAL *********************/
+h1 {
+  font-size: 140%;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 120%;
+  font-weight: 500;
+}
+
+section {
+  margin: 30px 50px;
 }
 
 /********************* LIENS *********************/
@@ -53,17 +67,146 @@ header ul {
   padding-right: 50px;
 }
 
-header li {
+header li a {
   display: block;
   padding: 32px;
+  border-top: solid white 2px;
 }
 
-header li:hover {
+header li a:hover {
   border-top: solid var(--bleu) 2px;
+}
+
+/********************* SECTION 1 : recherche *********************/
+#rechercheSearchbar {
+  margin: 15px 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#position {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grisclair);
+  font-size: 110%;
+  border-radius: 15px 0 0 15px;
+}
+
+#lieu,
+#bouton {
+  font-size: 110%;
+  font-weight: 500;
+  padding: 12px 18px;
+}
+
+#lieu {
+  border: solid 1px var(--grisclair);
+  width: 240px;
+}
+
+::placeholder {
+  opacity: 1;
+}
+
+#bouton {
+  background: var(--bleu);
+  color: #fff;
+  border: none;
+  border-radius: 0 15px 15px 0;
+}
+
+.mobile {
+  display: none;
+}
+
+#rechercheFiltres {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 34px;
+}
+
+#rechercheFiltres h2 {
+  margin-right: 40px;
+}
+
+#rechercheFiltresListe {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.filtres {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  border-radius: 30px;
+  border: solid 2px var(--grisfonce);
+  font-weight: 600;
+  font-size: 110%;
+  height: 100;
+}
+
+.filtres i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  background: var(--bleuclair);
+  color: var(--bleu);
+  border-radius: 50%;
+  margin: -2px;
+}
+
+.filtres p {
+  padding: 0 15px;
+  margin: 0;
+}
+
+.filtres:hover {
+  background: var(--bleuclair);
+  transition: 0.5s;
+}
+
+#rechercheResultats {
+  font-size: 98%;
+  margin-top: 30px;
+  margin-left: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  min-width: 30px;
+  color: var(--bleu);
+  border-radius: 50%;
+  border: solid 1px var(--grisfonce);
+  font-size: 75%;
+  margin-right: 15px;
 }
 
 /********************* AFFICHAGE TABLETTES *********************/
 @media screen and (min-width: 769px) and (max-width: 992px) {
+  section {
+    margin: 30px 30px;
+  }
+  #rechercheFiltres {
+    margin-top: 5px;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+  #rechercheFiltresListe {
+    margin-top: 10px;
+  }
 }
 
 /********************* AFFICHAGE SMARTPHONE *********************/
@@ -94,5 +237,37 @@ header li:hover {
     border-top: none;
     border-bottom: solid var(--bleu) 3px;
     color: var(--bleu);
+  }
+  section {
+    margin: 30px 20px;
+  }
+  h1 {
+    margin-bottom: 8px;
+  }
+  #rechercheSearchbar {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  #bouton {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin-left: -10px;
+  }
+  .mobile {
+    display: inline;
+  }
+  .desktop {
+    display: none;
+  }
+  #rechercheFiltres {
+    margin-top: 5px;
+    flex-flow: column wrap;
+    align-items: flex-start;
+  }
+  #rechercheFiltresListe {
+    margin-top: 10px;
   }
 }
