@@ -93,8 +93,24 @@ header li a:hover {
 }
 
 /********************* SECTION 1 : recherche *********************/
+
+#recherche {
+  margin-bottom: 22px;
+}
+
+#rechercheTitre h1 {
+  margin-bottom: 8px;
+}
+
+#rechercheTitre p {
+  font-weight: 300;
+  font-size: 100%;
+  margin-top: 0;
+}
+
 #rechercheSearchbar {
-  margin: 15px 0;
+  height: 54px;
+  margin-top: 15px;
   display: flex;
   flex-flow: row wrap;
 }
@@ -112,7 +128,7 @@ header li a:hover {
 #lieu,
 #bouton {
   font-size: 110%;
-  font-weight: 500;
+  font-weight: 600;
   padding: 12px 18px;
 }
 
@@ -140,7 +156,7 @@ header li a:hover {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  margin-top: 34px;
+  margin-top: 28px;
 }
 
 #rechercheFiltres h2 {
@@ -188,9 +204,9 @@ header li a:hover {
 }
 
 #rechercheResultats {
-  font-size: 98%;
-  margin-top: 30px;
-  margin-left: 10px;
+  font-weight: 300;
+  font-size: 102%;
+  margin: 20px 0 0 10px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -200,13 +216,14 @@ header li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  min-width: 30px;
+  height: 23px;
+  width: 23px;
+  /* min-width: 30px; */
   color: var(--bleu);
   border-radius: 50%;
   border: solid 1px var(--grisfonce);
   font-size: 75%;
-  margin-right: 15px;
+  margin-right: 11px;
 }
 
 /********************* SECTION 2 : résultats *********************/
@@ -220,22 +237,44 @@ header li a:hover {
 #populaires {
   background: var(--grisclair);
   border-radius: 20px;
-  padding: 30px;
+  padding: 27px 30px 0 40px;
+  margin-top: 0;
 }
 
 #hebergements {
-  flex: 67%;
+  flex: 68%;
   margin-right: 0;
+  margin-left: 50px;
+  padding: 27px 41px 0 41px;
 }
 
 #populaires {
-  flex: 33%;
+  flex: 32%;
   margin-left: 0;
+  margin-right: 50px;
+  margin-left: 0;
+  padding: 27px 40px 30px 35px;
+}
+
+#hebergements .title {
+  margin: 0 0 22px 0;
+}
+
+#populaires .title {
+  margin: 0 0 11px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#populaires .title i {
+  font-size: 140%;
 }
 
 .container {
   display: flex;
-  margin-top: 30px;
+  align-items: space-between;
   gap: 30px;
 }
 
@@ -246,7 +285,6 @@ header li a:hover {
 
 #populaires .container {
   flex-flow: column wrap;
-  align-items: space-between;
 }
 
 .card {
@@ -260,21 +298,30 @@ header li a:hover {
 #hebergements .card {
   flex-flow: column nowrap;
   width: 30%;
-  height: 230px;
+  height: 200px;
 }
 
 #populaires .card {
   flex-flow: row nowrap;
   width: 100%;
-  height: 160px;
+  height: 147px;
 }
 
 .cardImg {
+  width: 100%;
+}
+
+.cardImg img {
+  width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
 }
 
 #hebergements .cardImg {
+  height: 60%;
+}
+
+#hebergements .cardImg img {
   height: 100%;
   border-radius: 15px 15px 0 0;
 }
@@ -290,47 +337,186 @@ header li a:hover {
   flex-flow: column nowrap;
   background: #fff;
   font-size: 90%;
-  margin: 15px;
   min-width: 55%;
 }
 
 #hebergements .cardBody {
   justify-content: center;
+  margin: 5px 0 0 15px;
   border-radius: 0 0 15px 15px;
-  height: 100px;
 }
 
 #populaires .cardBody {
   justify-content: space-between;
   border-radius: 0 15px 15px 0;
-  margin: 15px;
+  margin: 5px 17px 10px 17px;
+  padding-right: 15px;
 }
 
-.cardTarif {
+#hebergements .cardTitre {
+  font-weight: 600;
+  font-size: 110%;
+  margin: 5px 0 6px 0;
+}
+
+#populaires .cardTitre {
+  font-weight: 600;
+  font-size: 110%;
+  margin: 5px 0 8px 0;
+}
+
+#hebergements .cardTarif {
   font-weight: 400;
-  margin-top: 0;
-  line-height: 0%;
+  font-size: 90%;
+  margin: 0 0 8px 0;
 }
 
-.cardNote {
+#populaires .cardTarif {
+  font-weight: 300;
+  font-size: 100%;
+  margin: 0 0 8px 0;
+}
+
+#hebergements .cardNote {
+  font-size: 80%;
+  word-spacing: -50%;
+}
+
+#populaires .cardNote {
   font-size: 75%;
 }
 
 #hebergementsMore {
-  margin: 40px 0 15px 10px;
-  font-size: 115%;
-  font-weight: 500;
+  margin: 40px 0 0px 10px;
+  font-size: 110%;
+  font-weight: 600;
 }
 
-#populairesTitle {
+.cardBodyTop {
+  padding: 5px 0 0 0;
+}
+
+/********************* SECTION 3 : activités *********************/
+
+#activites .container {
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 445px;
+  margin-top: 25px;
+}
+
+.activitesColonnes {
+  flex: 1;
+}
+
+.cardActivite {
+  border-radius: 20px;
+  box-shadow: 0px 0px 6px var(--grisfonce);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.cardActiviteImg {
+  width: 100%;
+  height: 100%;
+}
+
+.cardActiviteImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 15px 15px 0 0;
+}
+
+.cardActiviteTitle {
+  background-color: #fff;
+  align-items: center;
+  border-radius: 0 0 15px 15px;
+  height: 56px;
+  padding: 0 0 0 15px;
+  font-weight: 600;
+}
+
+#col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 45px;
+}
+
+#col2 .item1 {
+  width: 100%;
+  flex: 54%;
+}
+
+#col2 .item1 .cardActiviteImg {
+  height: 178px;
+}
+
+#col2 .item2 {
+  width: 100%;
+  flex: 37%;
+}
+
+#col2 .item2 .cardActiviteImg {
+  height: 108px;
+}
+
+#col4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#col4 .item1 {
+  width: 100%;
+  height: 45%;
+}
+
+#col4 .cardActiviteImg {
+  height: 138px;
+}
+
+#col4 .item2 {
+  width: 100%;
+  height: 45%;
+}
+
+/********************* FOOTER *********************/
+footer {
+  background: var(--grisclair);
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 210px;
+  height: 220px;
+  padding: 33px 50px;
 }
 
-#populairesTitle i {
-  font-size: 140%;
+.footerRubrique {
+  flex: 1;
+}
+
+.footerRubrique h2 {
+  font-weight: 600;
+  font-size: 110%;
+  margin-bottom: 20px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  display: block;
+  font-weight: 300;
+  font-size: 90%;
+  padding-bottom: 14px;
 }
 
 /********************* AFFICHAGE TABLETTES *********************/
@@ -370,7 +556,6 @@ header li a:hover {
   #populaires .card {
     width: 30%;
     height: auto;
-    /* flex-flow: column nowrap; */
   }
 }
 
@@ -459,10 +644,45 @@ header li a:hover {
     height: 45px;
     padding: 10px 0;
   }
+  #hebergements .cardTitre {
+    margin: 30px 0 6px 0;
+  }
   #hebergementsMore {
     margin: 0;
     margin-top: 30px;
     font-size: 110%;
     font-weight: 500;
+  }
+  #activites {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+  #activites .container {
+    flex-flow: column nowrap;
+    /* justify-content: space-between; */
+    height: 100%;
+    gap: 25px;
+  }
+  .cardActivite {
+    height: 190px;
+  }
+  .cardActiviteImg {
+    height: 134px;
+  }
+  .cardActiviteTitle {
+    height: 56px;
+  }
+  #col2 {
+    gap: 25px;
+  }
+  #col4 {
+    gap: 25px;
+  }
+  footer {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 0px;
+    height: 486px;
+    /* padding: 33px 50px; */
   }
 }
