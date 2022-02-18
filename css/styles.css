@@ -98,17 +98,17 @@ header li a:hover {
   margin-bottom: 22px;
 }
 
-#rechercheTitre h1 {
+#recherche-titre h1 {
   margin-bottom: 8px;
 }
 
-#rechercheTitre p {
+#recherche-titre p {
   font-weight: 300;
   font-size: 100%;
   margin-top: 0;
 }
 
-#rechercheSearchbar {
+#recherche-barre {
   height: 54px;
   margin-top: 15px;
   display: flex;
@@ -152,18 +152,18 @@ header li a:hover {
   display: none;
 }
 
-#rechercheFiltres {
+#recherche-filtres {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   margin-top: 28px;
 }
 
-#rechercheFiltres h2 {
+#recherche-filtres h2 {
   margin-right: 40px;
 }
 
-#rechercheFiltresListe {
+#recherche-filtres-liste {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -203,7 +203,7 @@ header li a:hover {
   transition: 0.5s;
 }
 
-#rechercheResultats {
+#recherche-resultats {
   font-weight: 300;
   font-size: 102%;
   margin: 20px 0 0 10px;
@@ -218,7 +218,6 @@ header li a:hover {
   align-items: center;
   height: 23px;
   width: 23px;
-  /* min-width: 30px; */
   color: var(--bleu);
   border-radius: 50%;
   border: solid 1px var(--grisfonce);
@@ -227,7 +226,7 @@ header li a:hover {
 }
 
 /********************* SECTION 2 : résultats *********************/
-#results {
+#resultats {
   display: flex;
   flex-flow: row nowrap;
   gap: 40px;
@@ -256,11 +255,11 @@ header li a:hover {
   padding: 27px 40px 30px 35px;
 }
 
-#hebergements .title {
+#hebergements .titre {
   margin: 0 0 22px 0;
 }
 
-#populaires .title {
+#populaires .titre {
   margin: 0 0 11px 0;
   display: flex;
   flex-flow: row nowrap;
@@ -268,7 +267,7 @@ header li a:hover {
   align-items: center;
 }
 
-#populaires .title i {
+#populaires .titre i {
   font-size: 140%;
 }
 
@@ -280,11 +279,12 @@ header li a:hover {
 
 #hebergements .container {
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #populaires .container {
   flex-flow: column wrap;
+  justify-content: space-between;
 }
 
 .card {
@@ -298,41 +298,44 @@ header li a:hover {
 #hebergements .card {
   flex-flow: column nowrap;
   width: 30%;
+  max-width: 45%;
   height: 200px;
 }
 
 #populaires .card {
   flex-flow: row nowrap;
+  justify-content: flex-start;
   width: 100%;
-  height: 147px;
+  min-height: 147px;
+  max-height: 160px;
 }
 
-.cardImg {
+.card-image {
   width: 100%;
 }
 
-.cardImg img {
+.card-image img {
   width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
 }
 
-#hebergements .cardImg {
-  height: 60%;
+#hebergements .card-image {
+  max-height: 60%;
+  min-height: 40%;
 }
 
-#hebergements .cardImg img {
+#hebergements .card-image img {
   height: 100%;
   border-radius: 15px 15px 0 0;
 }
 
-#populaires .cardImg {
-  width: 100%;
-  max-width: 130px;
+#populaires .card-image {
+  max-width: 40%;
   border-radius: 15px 0 0 15px;
 }
 
-.cardBody {
+.card-corps {
   display: flex;
   flex-flow: column nowrap;
   background: #fff;
@@ -340,59 +343,61 @@ header li a:hover {
   min-width: 55%;
 }
 
-#hebergements .cardBody {
+#hebergements .card-corps {
   justify-content: center;
   margin: 5px 0 0 15px;
   border-radius: 0 0 15px 15px;
 }
 
-#populaires .cardBody {
+#populaires .card-corps {
   justify-content: space-between;
   border-radius: 0 15px 15px 0;
   margin: 5px 17px 10px 17px;
   padding-right: 15px;
 }
 
-#hebergements .cardTitre {
+.card-titre {
   font-weight: 600;
   font-size: 110%;
-  margin: 5px 0 6px 0;
+  margin: 5px 0 0 0;
 }
 
-#populaires .cardTitre {
-  font-weight: 600;
-  font-size: 110%;
-  margin: 5px 0 8px 0;
+#hebergements .card-titre {
+  margin-bottom: 6px;
 }
 
-#hebergements .cardTarif {
-  font-weight: 400;
-  font-size: 90%;
+#populaires .card-titre {
+  margin-bottom: 8px;
+}
+
+.card-tarif {
   margin: 0 0 8px 0;
 }
 
-#populaires .cardTarif {
-  font-weight: 300;
-  font-size: 100%;
+#hebergements .card-tarif {
   margin: 0 0 8px 0;
 }
 
-#hebergements .cardNote {
+#populaires .card-tarif {
+  margin: 0 0 8px 0;
+}
+
+#hebergements .card-note {
   font-size: 80%;
   word-spacing: -50%;
 }
 
-#populaires .cardNote {
+#populaires .card-note {
   font-size: 75%;
 }
 
-#hebergementsMore {
-  margin: 40px 0 0px 10px;
+#hebergements-afficher-plus {
+  margin: 40px 0 45px 10px;
   font-size: 110%;
   font-weight: 600;
 }
 
-.cardBodyTop {
+.card-corps-haut {
   padding: 5px 0 0 0;
 }
 
@@ -405,11 +410,11 @@ header li a:hover {
   margin-top: 25px;
 }
 
-.activitesColonnes {
+.activites-colonnes {
   flex: 1;
 }
 
-.cardActivite {
+.card-activites {
   border-radius: 20px;
   box-shadow: 0px 0px 6px var(--grisfonce);
   background-color: #fff;
@@ -419,12 +424,12 @@ header li a:hover {
   justify-content: flex-start;
 }
 
-.cardActiviteImg {
+.card-activites-image {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 55px);
 }
 
-.cardActiviteImg img {
+.card-activites-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -432,58 +437,42 @@ header li a:hover {
   border-radius: 15px 15px 0 0;
 }
 
-.cardActiviteTitle {
+.card-activites-titre {
   background-color: #fff;
   align-items: center;
   border-radius: 0 0 15px 15px;
-  height: 56px;
-  padding: 0 0 0 15px;
-  font-weight: 600;
+  height: 55px;
+  padding: 15px;
+  font-weight: 700;
+  margin: 0;
 }
 
-#col2 {
+#activites-colonne-2 {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 45px;
+  gap: 44px;
 }
 
-#col2 .item1 {
+#activites-colonne-2 .item1 {
   width: 100%;
-  flex: 54%;
+  height: 236px;
 }
 
-#col2 .item1 .cardActiviteImg {
-  height: 178px;
-}
-
-#col2 .item2 {
+#activites-colonne-2 .item2 {
   width: 100%;
-  flex: 37%;
+  height: 163px;
 }
 
-#col2 .item2 .cardActiviteImg {
-  height: 108px;
-}
-
-#col4 {
+#activites-colonne-4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-#col4 .item1 {
+#activites-colonne-4 .item1,
+#activites-colonne-4 .item2 {
   width: 100%;
-  height: 45%;
-}
-
-#col4 .cardActiviteImg {
-  height: 138px;
-}
-
-#col4 .item2 {
-  width: 100%;
-  height: 45%;
+  height: 200px;
 }
 
 /********************* FOOTER *********************/
@@ -497,11 +486,11 @@ footer {
   padding: 33px 50px;
 }
 
-.footerRubrique {
+.footer-rubrique {
   flex: 1;
 }
 
-.footerRubrique h2 {
+.footer-rubrique h2 {
   font-weight: 600;
   font-size: 110%;
   margin-bottom: 20px;
@@ -524,15 +513,15 @@ footer li {
   section {
     margin: 30px 30px;
   }
-  #rechercheFiltres {
+  #recherche-filtres {
     margin-top: 5px;
     flex-flow: column nowrap;
     align-items: flex-start;
   }
-  #rechercheFiltresListe {
+  #recherche-filtres-liste {
     margin-top: 10px;
   }
-  #results {
+  #resultats {
     flex-flow: column-reverse nowrap;
     justify-content: center;
     gap: 0;
@@ -549,7 +538,7 @@ footer li {
   }
   #populaires .container {
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   #populaires .card {
     width: 30%;
@@ -614,7 +603,7 @@ footer li {
   .desktop {
     display: none;
   }
-  #rechercheFiltres {
+  #recherche-filtres {
     margin-top: 5px;
     flex-flow: column wrap;
     align-items: flex-start;
@@ -643,18 +632,24 @@ footer li {
   #hebergements .cardImage {
     height: 165px;
   }
-  #hebergements .cardBody {
+  #hebergements .card-corps {
     height: 45px;
     padding: 10px 0;
   }
-  #hebergements .cardTitre {
+  #hebergements .card-titre {
     margin: 30px 0 6px 0;
   }
-  #hebergementsMore {
+  #hebergements-afficher-plus {
     margin: 0;
     margin-top: 30px;
     font-size: 110%;
     font-weight: 500;
+  }
+  #hebergements .card {
+    max-width: 100%;
+  }
+  #populaires .card-image {
+    width: 38%;
   }
   #activites {
     padding-top: 0px;
@@ -665,20 +660,21 @@ footer li {
     height: 100%;
     gap: 25px;
   }
-  .cardActivite {
+  .card-activites {
     height: 190px;
   }
-  .cardActiviteImg {
+  .card-activites-image {
     height: 134px;
   }
-  .cardActiviteTitle {
-    height: 56px;
-  }
-  #col2 {
+  #activites-colonne-2,
+  #activites-colonne-4 {
     gap: 25px;
   }
-  #col4 {
-    gap: 25px;
+  #activites-colonne-2 .item1,
+  #activites-colonne-2 .item2,
+  #activites-colonne-4 .item1,
+  #activites-colonne-4 .item2 {
+    height: 190px;
   }
   footer {
     flex-flow: column nowrap;
