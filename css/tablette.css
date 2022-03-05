@@ -25,9 +25,11 @@
   #hebergements {
     background: #fff;
   }
+  #hebergements .card {
+    width: 30%;
+  }
   #populaires .container {
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-flow: row nowrap;
   }
   #populaires .card {
     width: 30%;
