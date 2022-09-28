@@ -4,13 +4,17 @@ Projet n°2 du [parcours Développeur Web](https://openclassrooms.com/fr/paths/5
 
 > Il s'agit d'intégrer les maquettes desktop et mobile qui sont fournies. Des spécifications techniques et fonctionnelles sont également fournies.
 
-## Technologie utilisées
+## 📚 Technologie utilisées
 
 - HTML
 - CSS
 - Icônes FontAwesome
 
-## Rendu visuel
+## 📎 Rendu visuel
 
 ![Le version desktop du site](./desktop.png)
-![Le version mobile du site](./mobile.png)
+![Le version mobile du site](./mobile.jpg)
+
+## 💻 Démo du site
+
+[Booki](https://clementstorne.github.io/Booki/)
